@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Syne:wght@400..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -15%;
+    left: 23%;
+}
+.login{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 300px;
+    width: 500px;
+    position: absolute;
+    margin-left: 32%;
+    margin-top: 8%;
+    padding: 10% 2% 2% 2%;
+}
+.logHead{
+    position: relative;
+    margin-top: 5%;
+    text-align: center;
+    font-family: "Syne", sans-serif;
+    font-size: 25px;
+}
+.regForm{
+    font-family: "Questrial", sans-serif;
+    font-size: 17px;
+    margin-top: 4%;
+    text-align: center;
+    z-index: 1;
+}
+.regForm a{
+    text-decoration: none;
+    color: #2667FF;
+    cursor: pointer;
+}
+.regForm a:hover{
+    text-decoration: underline 2px solid #2667FF;
+}
+.email{
+    margin-top: 10px;
+    width: 70%;
+    height: 30px;
+    font-family: "Questrial", sans-serif;
+    border: none;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.password{
+    width: 70%;
+    height: 30px;
+    font-family: "Questrial", sans-serif;
+    border: none;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.email:focus, .password:focus, input:focus{
+    outline: none;
+}
+.login-btn{
+    position: absolute;
+    font-size: 18px;
+    left: 33%;
+    top: 83%;
+    padding: 10px 70px 10px 70px;
+    font-family: "Syne", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #50C9CE;
+    color: black;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+}
+.error{
+    color: red;
+}
+.copyright{
+    font-family: "Questrial", sans-serif;
+    color: gray;
+    position: absolute;
+    margin-top: 15%;
+    left: 37%;
+    font-size: 14px;
+    cursor: pointer;
+}
