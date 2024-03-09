@@ -166,6 +166,7 @@ html{
     height: 0;
     width: 300px;
     background: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     border-radius: 20px;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -394,6 +395,21 @@ html{
     left: 6.3%;
     padding-right: 55%;
     text-align: justify;
+}
+.sec-5{
+    position: relative;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    margin-top: 3%;
+    width: 50%;
+    left: 25%;
+    margin-bottom: 3%;
+}
+.map{
+    height: 500px;
+    padding: 50px 0px 50px 0px;
+    position: relative;
+    left: 10%;
 }
 footer .footer{
     margin-top: -0.3%;
@@ -687,12 +703,12 @@ footer .footer{
     .our-story .story-bg{
         width: 45%;
         height: 550px;
-        margin-left: 55%;
+        margin-left: 50%;
     }
     .our-story .story-head{
         font-size: 24px;
         margin-top: -63%;
-        left: 4%;
+        left: 3%;
         z-index: 0;
     }
     .our-story .story-p{
@@ -700,8 +716,8 @@ footer .footer{
         font-size: 14px;
         position: absolute;
         margin-top: -56%;
-        left: 4.7%;
-        padding-right: 50%;
+        left: 3.5%;
+        padding-right: 53%;
     }
     .our-story .story-bg{
         width: 50%;

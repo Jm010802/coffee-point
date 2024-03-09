@@ -24,7 +24,7 @@ document.addEventListener('click', function(event) {
     const isInsideMenu = dropDownMenu.contains(target);
     const isToggleButton = target === toggleBtn || toggleBtn.contains(target);
 
-    if ((isLink || !isInsideMenu) && !isToggleButton) {
+    if ((isLink || (!isInsideMenu && dropDownMenu.classList.contains('open'))) && !isToggleButton) {
         dropDownMenu.classList.remove('open');
         toggleBtnIcon.classList = 'fa-solid fa-bars';
         document.body.style.overflow = '';
