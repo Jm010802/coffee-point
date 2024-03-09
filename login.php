@@ -24,8 +24,10 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // User found, set session and redirect to dashboard or another page
-    $_SESSION['username'] = $username;
-    header("Location: home.html"); // Redirect to dashboard page
+    $_SESSION['loggedin'] = true;
+    $_SESSION['email'] = $email;
+
+    header("Location: home-user.html"); // Redirect to dashboard page
 } else {
     echo '<script>';
     echo 'alert("Email or Password is wrong.");';

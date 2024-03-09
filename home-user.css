@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Syne:wght@400..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+.logo{
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    top: 35%;
+    left: 6%;
+}
+.logo-text{
+    color: black;
+    position: absolute;
+    z-index: 100;
+    top: 38%;
+    left: 8.5%;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Syne", sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.logo-text::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0%;
+    left: 0%;
+    bottom: -6px;
+    transition: 0.3s;
+}
+.logo-text:hover::after{
+    width: 100%;
+}
+.user-log{
+    position: absolute;
+    left: 90%;
+    margin-top: 2%;
+    width: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 85.5%;
+    margin-top: 4%;
+}
+  
+  /* Style the links inside the dropdown */
+.dropdown-content a {
+    font-family: "Questrial", sans-serif;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+  /* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 85.5%;
+    margin-top: 4%;
+}
+  
+  /* Style the links inside the dropdown */
+.dropdown-content2 a {
+    font-family: "Questrial", sans-serif;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+  /* Change color of dropdown links on hover */
+.dropdown-content2 a:hover {
+    background-color: #f1f1f1;
+}
+.cart{
+    position: absolute;
+    left: 95%;
+    margin-top: 1.8%;
+    width: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+.nav{
+    height: 80px;
+    background: white;
+    backdrop-filter: blur(10px);
+}
+.nav-links{
+    font-size: 20px;
+    font-family: "Syne", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.nav-links ul{
+    display: flex;
+    list-style: none;
+    gap: 8%;
+    position: relative;
+    color: white;
+    z-index: 1;
+    top: 30px;
+    text-align: center;
+    justify-content: center;
+}
+.nav-links ul li a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+.nav-links ul li a::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0%;
+    left: 0%;
+    bottom: -5px;
+    transition: 0.3s;
+}
+.nav-links ul li a:hover::after{
+    width: 100%;
+}
+.toggle-btn{
+    position: relative;
+    left: 93%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+/* DROPDOWN MENU */
+.dropdown-menu{
+    display: none;
+    text-transform: uppercase;
+    font-family: "Syne", sans-serif;
+    font-weight: bold;
+    position: absolute;
+    right: 2rem;
+    top: 85px;
+    height: 0;
+    width: 300px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 100;
+}
+.dropdown-menu.open{
+    height: 320px;
+}
+.dropdown-menu ul{
+    margin-top: 20%;
+}
+.dropdown-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8%;
+}
+.dropdown-menu li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    position: absolute;
+}
+.dropdown-menu  li a::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0%;
+    left: 0%;
+    bottom: -5px;
+    transition: 0.3s;
+}
+.dropdown-menu  ul li a:hover::after{
+    width: 100%;
+}
+.background img{
+    position: relative;
+    object-fit: fill;
+    width: 100%;
+    margin-top: -5.5%;
+    clip-path: inset(0px 0px 520px 0 round 0px);
+    filter: brightness(20%);
+    z-index: -1;
+}
+.background h1{
+    position: absolute;
+    margin-top: -69%;
+    color: white;
+    font-family: "Syne", sans-serif;
+    text-transform: uppercase;
+    font-size: 80px;
+    left: 5%;
+}
+.background p{
+    position: absolute;
+    color: white;
+    font-family: "Questrial", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding-right: 30%;
+    margin-top: -53%;
+    left: 31%;
+}
+.btn-explore{
+    font-size: 20px;
+    padding: 10px 30px 10px 30px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-family: "Syne", sans-serif;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 33%;
+    left: 45%;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    color: white;
+    transition: .5s ease-in-out;
+    z-index: 1;
+}
+.btn-explore::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 6px;
+    transition: .5s ease-in-out;
+    z-index: -1;
+}
+.btn-explore:hover::before{
+    left: 0;
+    z-index: -1;
+}
+.btn-explore:hover{
+    color: black;
+}
+.sContent .about-bg{
+    width: 45%;
+    height: 550px;
+    margin-top: -34.5%;
+    margin-left: -2%;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+.sContent .about{
+    color: black;
+    z-index: 1;
+    font-size: 40px;
+    font-family: "Syne", sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    margin-top: -25%;
+    left: 50%;
+}
+.sContent .about-p{
+    font-family: "Questrial", sans-serif;
+    font-size: 20px;
+    position: absolute;
+    margin-top: -21%;
+    left: 50%;
+    padding-right: 10%;
+    text-align: justify;
+}
+.offer{
+    background-color: #020202;
+    margin-top: -0.3%;
+    height: 700px;
+    position: relative;
+}
+.offer-head{
+    font-family: "Syne", sans-serif;
+    position: absolute;
+    color: white;
+    margin-top: 4%;
+    left: 38.5%;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.offer1{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    top: 30%;
+    left: 10%;
+    border-radius: 10px;
+}
+.offer1-text{
+    position: absolute;
+    color: white;
+    font-family: "Questrial", sans-serif;
+    font-size: 18px;
+    top: 78%;
+    left: 10%;
+    padding-right: 70.5%;
+    text-align: justify;
+}
+.offer2{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    top: 30%;
+    left: 40.8%;
+    border-radius: 10px;
+}
+.offer2-text{
+    position: absolute;
+    color: white;
+    font-family: "Questrial", sans-serif;
+    font-size: 18px;
+    top: 78%;
+    left: 40.8%;
+    padding-right: 39.5%;
+    text-align: justify;
+}
+.offer3{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    top: 30%;
+    left: 71.6%;
+    border-radius: 10px;
+}
+.offer3-text{
+    position: absolute;
+    color: white;
+    font-family: "Questrial", sans-serif;
+    font-size: 18px;
+    top: 78%;
+    left: 71.6%;
+    padding-right: 9%;
+    text-align: justify;
+}
+.our-story .story-bg{
+    width: 45%;
+    height: 550px;
+    margin-left: 55%;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+.our-story .story-head{
+    color: black;
+    z-index: 1;
+    font-size: 40px;
+    font-family: "Syne", sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    margin-top: -26%;
+    left: 6%;
+}
+.our-story .story-p{
+    font-family: "Questrial", sans-serif;
+    font-size: 20px;
+    position: absolute;
+    margin-top: -22%;
+    left: 6.3%;
+    padding-right: 55%;
+    text-align: justify;
+}
+footer .footer{
+    margin-top: -0.3%;
+    height: 180px;
+    background-color: #020202;
+}
+.logo-footer{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -2%;
+    margin-top: -1%;
+}
+.title-footer{
+    color: white;
+    font-family: "Syne", sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    position: absolute;
+    margin-top: 3.5%;
+    left: 8.5%;
+    cursor: pointer;
+}
+.tagline{
+    color: white;
+    font-family: "Questrial",sans-serif;
+    position: absolute;
+    margin-top: 6%;
+    left: 8.5%;
+    font-size: 16px;
+}
+.explore{
+    color: white;
+    font-family: "Questrial",sans-serif;
+    position: absolute;
+    margin-top: 2.3%;
+    left: 30%;
+    font-size: 16px;
+    font-weight: bold;
+}
+.home-page{
+    color: grey;
+    font-family: "Questrial",sans-serif;
+    position: absolute;
+    margin-top: 4%;
+    left: 30%;
+    font-size: 14px;
+    cursor: pointer;
+}
+.home-page:hover{
+    color: white;
+}
+.home-page::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0%;
+    left: 0%;
+    bottom: -2px;
+    transition: 0.3s;
+}
+.home-page:hover::after{
+    width: 100%;
+}
+.about-page{
+    color: grey;
+    font-family: "Questrial",sans-serif;
+    position: absolute;
+    margin-top: 5.5%;
+    left: 30%;
+    font-size: 14px;
+    cursor: pointer;
+}
+.about-page:hover{
+    color: white;
+}
+.about-page::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0%;
+    left: 0%;
+    bottom: -2px;
+    transition: 0.3s;
+}
+.about-page:hover::after{
+    width: 100%;
+}
+.shop-page{
+    color: grey;
+    font-family: "Questrial",sans-serif;
+    position: absolute;
+    margin-top: 7%;
+    left: 30%;
+    font-size: 14px;
+    cursor: pointer;
+}
+.shop-page:hover{
+    color: white;
+}
+.shop-page::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0%;
+    left: 0%;
+    bottom: -2px;
+    transition: 0.3s;
+}
+.shop-page:hover::after{
+    width: 100%;
+}
+.social{
+    position: absolute;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Syne", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    left: 85%;
+    margin-top: 2.3%;
+}
+.fb{
+    position: absolute;
+    left: 84%;
+    height: 30px;
+    margin-top: 6%;
+}
+.ig{
+    position: absolute;
+    left: 88%;
+    height: 30px;
+    margin-top: 6%;
+}
+.twitter{
+    position: absolute;
+    left: 92%;
+    height: 30px;
+    margin-top: 6%;
+}
+.copyright{
+    position: absolute;
+    color: grey;
+    font-family: "Questrial", sans-serif;
+    margin-top: 10%;
+    left: 41%;
+}
+
+
+/* media queries */
+
+@media screen and (min-width: 1025px) {
+    /* Styles for desktops */
+  }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for laptops */
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* Styles for tablets */
+}
+
+@media screen and (max-width: 480px) {
+    /* Styles for mobile phones */
+    .user-log2{
+        position: absolute;
+        left: 45%;
+        margin-top: 5%;
+        height: 30px;
+        width: 30px;
+        border-radius: 50px;
+        border: 2px solid black;
+        padding: 5px 5px 5px 5px;
+    }
+    .dropdown-content2 {
+        display: block;
+        left: 30%;
+        margin-top: 18%;
+    }
+    .navigation{
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+    .user-log, .cart,.nav-links ul li a{
+        display: none;
+    }
+    .logo-text{
+        left: 15%;
+    }
+    .toggle-btn{
+        margin-top: 5.5%;
+        display: block;
+    }
+    .btn-explore{
+        z-index: 0;
+    }
+    .dropdown-menu{
+        display: block;
+        left: 2rem;
+        width: unset;
+    }
+    .background img{
+        position: relative;
+        object-fit: fill;
+        width: 100%;
+        margin-top: 17%;
+        clip-path: inset(0px 0px 100px 0 round 0px);
+        filter: brightness(20%);
+        z-index: -1;
+    }
+    .background h1{
+        font-size: 24px;
+    }
+    .background p{
+        font-size: 14px;
+    }
+    .btn-explore{
+        font-size: 8px;
+        left: 38%;
+        top: 22%;
+    }
+    .sContent .about-bg{
+        width: 50%;
+        height: 300px;
+        margin-top: -22.5%;
+    }
+    .sContent .about{
+        font-size: 24px;
+        margin-top: -50%;
+        left: 52%;
+        z-index: 0;
+    }
+    .sContent .about-p{
+        font-size: 14px;
+        margin-top: -43%;
+        left: 52%;
+        padding-right: 5%;
+    }
+    .offer{
+        margin-top: -1%;
+        height: 400px;
+    }
+    .offer-head{
+        margin-top: 4%;
+        left: 24%;
+        font-size: 24px;
+    }
+    .offer1{
+        width: 120px;
+        height: 120px;
+        top: 20%;
+        left: 5%;
+    }
+    .offer1-text{
+        font-size: 12px;
+        top: 55%;
+        left: 6%;
+        text-align: center;
+    }
+    .offer2{
+        width: 120px;
+        height: 120px;
+        top: 20%;
+        left: 38%;
+    }
+    .offer2-text{
+        font-size: 12px;
+        top: 55%;
+        left: 39%;
+        text-align: center;
+        padding-right: 38%;
+    }
+    .offer3{
+        width: 120px;
+        height: 120px;
+        top: 20%;
+        left: 71%;
+    }
+    .offer3-text{
+        font-size: 12px;
+        top: 55%;
+        left: 72%;
+        padding-right: 5%;
+        text-align: center;
+    }
+    .our-story .story-bg{
+        width: 45%;
+        height: 550px;
+        margin-left: 55%;
+    }
+    .our-story .story-head{
+        font-size: 24px;
+        margin-top: -63%;
+        left: 4%;
+        z-index: 0;
+    }
+    .our-story .story-p{
+        font-family: "Questrial", sans-serif;
+        font-size: 14px;
+        position: absolute;
+        margin-top: -56%;
+        left: 4.7%;
+        padding-right: 50%;
+    }
+    .our-story .story-bg{
+        width: 50%;
+        height: 300px;
+        margin-top: 0%;
+    }
+    .sec-5{
+        position: relative;
+        border-top: 2px solid grey;
+        border-bottom: 2px solid grey;
+        margin-top: 3%;
+        width: 50%;
+        left: 27%;
+        margin-bottom: 3%;
+    }
+    .map{
+        height: 300px;
+        width: 300px;
+        left: -18%;
+    }
+    .logo-footer{
+        width: 100px;
+        height: 100px;
+        left: 0%;
+        margin-top: -3%;
+    }
+    .title-footer{
+        font-size: 18px;
+        margin-top: 4.5%;
+        left: 18%;
+    }
+    .tagline{
+        color: white;
+        font-family: "Questrial",sans-serif;
+        position: absolute;
+        margin-top: 10%;
+        left: 18.5%;
+        font-size: 12px;
+    }
+    .explore{
+        margin-top: 16%;
+        left: 7%;
+        font-size: 14px;
+    }
+    .home-page{
+        margin-top: 20%;
+        left: 7.2%;
+        font-size: 12px;
+    }
+    .about-page{
+        margin-top: 24%;
+        left: 7.2%;
+        font-size: 12px;
+    }
+    .shop-page{
+        margin-top: 28%;
+        left: 7.2%;
+        font-size: 12px;
+    }
+    .social{
+        font-size: 14px;
+        left: 75%;
+        margin-top: 16%;
+    }
+    .fb{
+        position: absolute;
+        left: 70%;
+        height: 24px;
+        margin-top: 22%;
+    }
+    .ig{
+        position: absolute;
+        left: 79.5%;
+        height: 24px;
+        margin-top: 22%;
+    }
+    .twitter{
+        position: absolute;
+        left: 89%;
+        height: 24px;
+        margin-top: 22%;
+    }
+    .copyright{
+        margin-top: 36%;
+        left: 30%;
+        font-size: 12px;
+    }
+}

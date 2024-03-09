@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./home-user.css" />
 
     <title>Home Page</title>
 
@@ -14,15 +15,41 @@
     <!--Navigation start-->
     <section class="navigation">
         <nav class="nav">
-        <a href="./home.html"><img src="./img/icons/coffee-logo1.png" class="logo"></a>
-        <a href="./home.html"><p class="logo-text">Coffee Point</p></a>
-        <a href="./registration.html"><img src="./img/icons/user1.png" class="user-log"></a>
+        <a href="./home-user.html"><img src="./img/icons/coffee-logo1.png" class="logo"></a>
+        <a href="./home-user.html"><p class="logo-text">Coffee Point</p></a>
+        
+        <div class="dropdown" onclick="toggleDropdown()">
+            <img src="./img/icons/user1.png" class="user-log"></a>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="./edit-info.php">Edit Account</a>
+                <a href="./home-guest.html">Logout</a>
+            </div>
+        </div>
+        
         <a href="#"><img src="./img/icons/cart1.png" class="cart"></a>
             <div class="nav-links">
                 <ul>
-                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./home-user.html">Home</a></li>
                     <li><a href="#sContent">About</a></li>
-                    <li><a href="">Shop</a></li>
+                    <li><a href="./shop-user.html">Shop</a></li>
+                </ul>
+                <div class="toggle-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="dropdown-menu">
+                <div class="dropdown2" onclick="toggleDropdown2()">
+                    <img src="./img/icons/user1.png" class="user-log2"></a>
+                    <div class="dropdown-content2" id="myDropdown2">
+                        <a href="./edit-info.php">Edit Account</a>
+                        <a href="./home-guest.html">Logout</a>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="./home-guest.html">Home</a></li>
+                    <li><a href="#sContent">About</a></li>
+                    <li><a href="./shop-guest.html">Shop</a></li>
+                    <li><a href="#">Cart</a></li>
                 </ul>
             </div>
         </nav>
@@ -74,27 +101,57 @@
     </section>
     <!--sec4 ends-->
 
+    <!--sec5 start-->
+    <section class="sec-5">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1313.3294356937704!2d121.0805619536196!3d14.331235251879102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTTCsDE5JzUzLjEiTiAxMjHCsDA0JzUzLjciRQ!5e1!3m2!1sen!2sph!4v1709892261016!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <!--sec5 ends-->
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script>
+        function initMap() {
+          // Coordinates of the landmark
+          var landmark = { lat: latitude, lng: longitude };
+      
+          // Create a map object and specify the DOM element for display.
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: landmark,
+            zoom: 15 // Adjust zoom level as needed
+          });
+      
+          // Create a marker and set its position.
+          var marker = new google.maps.Marker({
+            position: landmark,
+            map: map,
+            title: 'Your Landmark' // Title shown when hovering over the marker
+          });
+        }
+    </script>      
+    <script>
+        initMap();
+    </script>
+    <script src="home-user.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-      </script>
+    </script>
+    <script src="home-user-ham.js"></script>
 </body>
 
 <footer>
 
     <div class="footer">
-        <a href="./home.html"><img src="./img/logo_nobg-coffee.png" class="logo-footer" data-aos="fade-right" data-aos-duration="2500" data-aos-once="true"></a>
+        <a href="./home-user.html"><img src="./img/logo_nobg-coffee.png" class="logo-footer" data-aos="fade-right" data-aos-duration="2500" data-aos-once="true"></a>
         <div class="footer-logo" data-aos="fade-down" data-aos-duration="2500" data-aos-once="true">
-            <a href="./home.html"><h1 class="title-footer">Coffee Point</h1></a>
+            <a href="./home-user.html"><h1 class="title-footer">Coffee Point</h1></a>
             <p class="tagline">Where every cup tells a story.</p>
         </div>
         
         <p class="explore" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">Explore</p>
         <div class="page-links" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
-            <a href="./home.html"><p class="home-page">Home</p></a>
+            <a href="./home-user.html"><p class="home-page">Home</p></a>
             <a href="#sContent"><p class="about-page" >About</p></a>
-            <a href="#"><p class="shop-page">Shop</p></a>
+            <a href="./shop-user.html"><p class="shop-page">Shop</p></a>
         </div>
         
         <div class="social-media" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
